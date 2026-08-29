@@ -3,31 +3,47 @@ function Chamar_TTY (Mensagem: string) {
     game.showLongText("TTY não foi feito, preciso de ajuda da comunidade", DialogLayout.Full)
 }
 let TTY = false
-let myMenu2: Sprite = null
+let RE: Sprite = null
+let OS: Sprite = null
 console.log("WaringLite: PT-BR UFT.8 selecionado")
-let myMenu = miniMenu.createMenu(
+let GRUB = miniMenu.createMenu(
 miniMenu.createMenuItem("LiteOS", assets.image`LiteOS`),
 miniMenu.createMenuItem("LiRE", assets.image`LiRE`),
 miniMenu.createMenuItem("Mais Index", assets.image`More`),
 miniMenu.createMenuItem("Desligar", assets.image`Power Off`)
 )
-miniMenu.setTitle(myMenu, "LiManager")
-miniMenu.onButtonPressed(myMenu, miniMenu.Button.A, function (selection, selectedIndex) {
-    miniMenu.close(myMenu)
+miniMenu.setTitle(GRUB, "LiManager")
+miniMenu.onButtonPressed(GRUB, miniMenu.Button.A, function (selection, selectedIndex) {
+    miniMenu.close(GRUB)
     if (selectedIndex == 0) {
-        console.log("LiManager: A opcão  selecionada é \"Keep LiteOS\"")
+        console.log("LiManager: A opcão selecionada é \"Keep LiteOS\"")
         console.log("LiteOS inicializado")
+        music.play(music.stringPlayable("C E A E F A E G ", 120), music.PlaybackMode.InBackground)
+        OS = miniMenu.createMenu(
+        miniMenu.createMenuItem("Relógio"),
+        miniMenu.createMenuItem("Calendário")
+        )
+        miniMenu.setTitle(OS, "LiteOS")
+        miniMenu.onButtonPressed(OS, miniMenu.Button.A, function (selection, selectedIndex) {
+            if (selectedIndex == 0) {
+                console.log("selection = " + selection + " index = " + selectedIndex)
+                game.showLongText("O horário da placa mãe é " + RTC.getFormattedTime(RTC.currentTime(), RTC.TimeFormat.HH_MM_24H), DialogLayout.Center)
+            } else {
+                console.log("selection = " + selection + " index = " + selectedIndex)
+                game.showLongText("A data da placa mãe é " + RTC.getFormattedDate(RTC.currentTime(), RTC.DateFormat.DD_MM_YYYY, "/"), DialogLayout.Center)
+            }
+        })
     } else if (selectedIndex == 1) {
         game.showLongText("Read DATA: USB", DialogLayout.Center)
         console.log("LiManager: A opcão  selecionada é \"LiRE\"")
         pause(100)
         console.log("RE: nada preciso")
-        myMenu2 = miniMenu.createMenu(
+        RE = miniMenu.createMenu(
         miniMenu.createMenuItem("Read.Rev", assets.image`More`),
         miniMenu.createMenuItem("Exit", assets.image`Power Off`)
         )
-        miniMenu.setTitle(myMenu2, "GRUB")
-        miniMenu.onButtonPressed(myMenu2, miniMenu.Button.A, function (selection, selectedIndex) {
+        miniMenu.setTitle(RE, "GRUB")
+        miniMenu.onButtonPressed(RE, miniMenu.Button.A, function (selection, selectedIndex) {
             if (selectedIndex == 0) {
                 game.showLongText("Read DATA: USB", DialogLayout.Center)
                 game.reset()
