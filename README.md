@@ -1,26 +1,17 @@
- 
+ATTENTION!!!!!!!!! The project is in Brazilian Portuguese.
 
+## O que tem
+A extensão Mini Menu.
+A extensão Arcade RTC. Essa extenção usa o horário da placa mãe
 
-> Open this page at [https://corocotoco22-cmyk.github.io/varejoo-arcade/](https://corocotoco22-cmyk.github.io/varejoo-arcade/)
+## O que a comunidade pode fazer
+Criar Packs de tradução, criar APPS, criar UI(Ou com Mini Menu ou com mouse(Setas = movimentação. A = click esquerdo. B = voltar ou  click direito)(Setas = Setas. A = Botão A. B = Botão B)), etc.
 
-## Use as Extension
+## Porque eu botei no Github
+Porquê preciso de ajuda para criar o TTY e o sistema
 
-This repository can be added as an **extension** in MakeCode.
+# Vídeos
+YoyTube: Ainda por vir
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/corocotoco22-cmyk/varejoo-arcade** and import
-
-## Edit this project
-
-To edit this repository in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/corocotoco22-cmyk/varejoo-arcade** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+# Despedida
+Tchau, obrigado por ver
