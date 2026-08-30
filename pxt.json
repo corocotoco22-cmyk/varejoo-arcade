@@ -4,7 +4,9 @@
     "dependencies": {
         "device": "*",
         "arcade-mini-menu": "github:riknoll/arcade-mini-menu#v0.1.0",
-        "arcade-rtc": "github:riknoll/arcade-rtc#0dd34274ff955c1b322857623ea2911719679c7d"
+        "arcade-rtc": "github:riknoll/arcade-rtc#0dd34274ff955c1b322857623ea2911719679c7d",
+        "radio": "*",
+        "Notifications": "github:UnsignedArduino/Notifications#de6517dcc280cafe902ef212f59d4f55a982c7ec"
     },
     "files": [
         "main.blocks",
